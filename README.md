@@ -15,7 +15,7 @@ class MyPlugin(): JavaPlugin() {
   }
   override fun onEnable() {
     //코드들...
-    val tasKT = TaskTimer(this)
+    val tasKT = AsyncTaskTimer(this)
     tasKT.asyncTaskTimer {
       run {
         testFunc()
