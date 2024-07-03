@@ -1,4 +1,4 @@
-package io.github.FlagFan34272.pcutills
+package io.github.FlagFan34272.taskt
 
 import org.bukkit.Bukkit
 import org.bukkit.plugin.java.JavaPlugin
@@ -42,8 +42,8 @@ class AsyncRunner(private val plugin: JavaPlugin) {
     }
 
 
-    fun asyncTaskTimer(init: AsyncTaskTimer.() -> Unit): AsyncTaskTimer {
-        val taskTimer = AsyncTaskTimer(this.plugin)
+    fun runAsync(init: AsyncRunner.() -> Unit): AsyncRunner {
+        val taskTimer = AsyncRunner(this.plugin)
         taskTimer.init()
         return taskTimer
     }
